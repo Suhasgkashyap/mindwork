@@ -1,0 +1,163 @@
+================================================================================
+  MINDWORK - DEPLOYMENT CHECKLIST
+  Status: READY TO DEPLOY TO VERCEL
+================================================================================
+
+YOUR VERCEL IMPORT SCREEN IS OPEN NOW. HERE'S WHAT TO DO:
+
+================================================================================
+STEP 1: CONFIGURE ENVIRONMENT VARIABLES
+================================================================================
+
+In the Vercel import screen:
+1. Click "Environment Variables" (expand it)
+2. Add TWO environment variables:
+
+   Variable 1:
+   Name:  DATABASE_PATH
+   Value: ./data/mindwork.db
+   
+   Variable 2:
+   Name:  NODE_ENV
+   Value: production
+
+3. Do NOT include quotes around values
+4. Click "Add" or "Save"
+
+================================================================================
+STEP 2: VERIFY BUILD SETTINGS
+================================================================================
+
+Should already be configured:
+✓ Framework: Vite
+✓ Build Command: npm run build
+✓ Output Directory: dist
+✓ Root Directory: ./
+
+If any are missing, Vercel will auto-detect them correctly.
+
+================================================================================
+STEP 3: DEPLOY
+================================================================================
+
+1. Click the blue "Deploy" button at the bottom
+2. Wait for build to complete (2-5 minutes)
+3. You'll see a live URL: https://mindwork-xxxxx.vercel.app
+
+================================================================================
+STEP 4: TEST YOUR DEPLOYMENT
+================================================================================
+
+Once deployment completes:
+
+1. Go to your live URL: https://mindwork-xxxxx.vercel.app
+
+2. Login as ALICE (Employee):
+   Email:    alice@mindwork.io
+   Password: Password123!
+
+3. Find the task "Implement Refresh Token Cache in Redis"
+
+4. Click "Submit Work"
+
+5. Upload the file: corrected_poster.zip
+
+6. Fill in:
+   Work Summary: "Implemented MindWork poster with blue background"
+   Completion Status: "100% Completed"
+
+7. Submit
+
+8. Logout and login as BOB (Manager):
+   Email:    bob.manager@mindwork.io
+   Password: Password123!
+
+9. Go to "Submitted Work"
+
+10. Click on Alice's submission
+
+11. VERIFY: ZIP Requirements should show:
+    ✓ Background color must be blue (4/4 PASSED)
+    ✓ Main heading font size 20px
+    ✓ Required heading "MindWork"
+    ✓ Employee well-being image
+
+12. Download ZIP to inspect it
+
+13. Request changes or approve
+
+================================================================================
+IF SOMETHING GOES WRONG
+================================================================================
+
+Error: "DATABASE_PATH should be string"
+→ Make sure you didn't include quotes around the value
+
+Error: "Cannot find module"
+→ Wait 30 seconds and refresh, database is initializing
+
+Error: "Login fails"
+→ Server might still be starting, wait 1 minute and try again
+
+Error: "Cannot connect to database"
+→ This is normal on first deployment, give it 30-60 seconds
+
+Check logs:
+→ Vercel Dashboard → Select project → Logs tab
+→ Or run: vercel logs
+
+================================================================================
+GITHUB REPOSITORY
+================================================================================
+
+All code is pushed here:
+https://github.com/Suhasgkashyap/mindwork
+
+Files include:
+✓ Full React frontend
+✓ Express backend
+✓ Database initialization script
+✓ 66/66 passing tests
+✓ Corrected ZIP demo file
+✓ Complete documentation
+
+On every push to main branch, Vercel auto-redeploys:
+1. Make changes locally
+2. git add .
+3. git commit -m "description"
+4. git push origin main
+→ Automatic deployment starts
+
+================================================================================
+QUICK REFERENCE
+================================================================================
+
+Your Live App:      https://mindwork-xxxxx.vercel.app
+GitHub Repo:        https://github.com/Suhasgkashyap/mindwork
+Vercel Dashboard:   https://vercel.com/dashboard
+View Logs:          vercel logs
+Redeploy:          vercel --prod
+
+Test Credentials:
+  Manager:  bob.manager@mindwork.io / Password123!
+  Employee: alice@mindwork.io / Password123!
+  Other:    priya@mindwork.io / Password123!
+            rahul@mindwork.io / Password123!
+            sneha@mindwork.io / Password123!
+            david.cole@mindwork.io / Password123!
+
+================================================================================
+YOU ARE HERE - READY TO DEPLOY!
+================================================================================
+
+Next action: Click the Deploy button in Vercel
+
+Expected result within 5 minutes:
+- Build completes successfully
+- Live URL available
+- Database initialized with demo data
+- Ready for testing
+
+Good luck! Your MindWork application will be live soon. 🚀
+
+================================================================================
