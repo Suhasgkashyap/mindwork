@@ -1,36 +1,23 @@
 {
   "version": 2,
+  "framework": "vite",
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "framework": "vite",
   "env": {
     "DATABASE_PATH": {
       "description": "SQLite database path",
-      "default": "data/mindwork.db"
+      "default": "./data/mindwork.db"
     },
     "NODE_ENV": {
       "description": "Node environment",
       "default": "production"
     }
   },
+  "regions": ["iad1"],
   "functions": {
     "server.ts": {
-      "memory": 3008,
       "maxDuration": 60,
-      "runtime": "nodejs18.x"
+      "memory": 3008
     }
-  },
-  "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": "/server.ts"
-    }
-  ],
-  "routes": [
-    {
-      "src": "^/(.*)$",
-      "destination": "/index.html",
-      "status": 200
-    }
-  ]
+  }
 }
