@@ -1,0 +1,12 @@
+{
+  "name": "mindwork-desktop-tracker",
+  "version": "1.0.0",
+  "description": "MindWork Standalone Multi-Laptop Workplace Activity Tracker",
+  "main": "desktop-tracker.js",
+  "scripts": {
+    "start": "node desktop-tracker.js"
+  },
+  "keywords": ["mindwork", "tracker", "workplace", "telemetry"],
+  "author": "MindWork Engineering Team",
+  "license": "ISC"
+}

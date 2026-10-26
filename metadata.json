@@ -1,0 +1,6 @@
+{
+  "name": "MindWork – Burnout Early Detection System",
+  "description": "Detect Early. Support Better. Work Healthier. Machine learning powered burnout risk detection using Random Forest classification on employee workload and work-pattern metrics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

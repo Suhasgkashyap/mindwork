@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MindWork – Burnout Early Detection System</title>
+    <meta name="description" content="Detect Early. Support Better. Work Healthier. Machine learning powered burnout risk detection using Random Forest classification on employee workload and work-pattern metrics." />
+    <meta property="og:title" content="MindWork – Burnout Early Detection System" />
+    <meta property="og:description" content="Detect Early. Support Better. Work Healthier. Machine learning powered burnout risk detection using Random Forest classification on employee workload and work-pattern metrics." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      // In development preview within iframes, ignore Vite internal HMR connection failures without suppressing application errors
+      window.addEventListener('error', function (event) {
+        if (event.filename && event.filename.includes('@vite/client')) {
+          event.stopImmediatePropagation();
+          event.preventDefault();
+          return true;
+        }
+      }, true);
+      window.addEventListener('unhandledrejection', function (event) {
+        var details = '' + (event.reason && (event.reason.stack || event.reason.message || event.reason) || '');
+        if (details.includes('@vite/client')) {
+          event.stopImmediatePropagation();
+          event.preventDefault();
+        }
+      }, true);
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

@@ -1,0 +1,34 @@
+MindWork – Burnout Early Detection System
+Methodology: Objective Work-Pattern & Productivity Telemetry (No subjective surveys)
+Model: RandomForestClassifier (n_estimators=200, random_state=42)
+Trained on: 2026-10-07 05:43:28
+Dataset: burnout_employee_dataset_500_productivity_updated(1).csv (500 records)
+Train samples: 400 | Test samples: 100
+
+SELECTED OBJECTIVE FEATURES (15):
+Department, Age, Experience_Years, Workload_Level, Working_Hours_Per_Day, Overtime_Hours_Per_Week, Assigned_Tasks, Completed_Tasks, Task_Completion_Rate, Deadline_Pressure, Productivity_Score, App_Usage_Hours_Per_Day, Active_Work_Hours, Idle_Hours, Leave_Days_Taken
+
+EXCLUDED SUBJECTIVE/IDENTIFIER FEATURES (8):
+Employee_ID, Burnout_Risk, Stress_Level, Sleep_Hours_Per_Night, Job_Satisfaction, Work_Life_Balance, Manager_Support, Employee_Feedback_Score
+
+CLASSIFICATION REPORT:
+              precision    recall  f1-score   support
+
+         Low     0.6667    0.1250    0.2105        16
+      Medium     0.6173    0.8929    0.7299        56
+        High     0.6875    0.3929    0.5000        28
+
+    accuracy                         0.6300       100
+   macro avg     0.6572    0.4702    0.4802       100
+weighted avg     0.6448    0.6300    0.5824       100
+
+
+CONFUSION MATRIX (Rows=True, Cols=Predicted):
+Classes: ['Low', 'Medium', 'High']
+[[ 2 14  0]
+ [ 1 50  5]
+ [ 0 17 11]]
+
+ACCURACY: 0.6300
+MACRO F1: 0.4802
+WEIGHTED F1: 0.5824
